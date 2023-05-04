@@ -36,15 +36,22 @@
 // // Splide
 window.addEventListener("load", (event) => {
 
-const splide = new Splide( '.splide', {
+const splide = new Splide( '.hero .splide', {
     heightRatio: 0.5625,
     cover      : true,
     video      : {
       loop: true,
     },
   } );
- new Splide( '.splide' ).mount( window.splide.Extensions );
+ new Splide( '.hero .splide' ).mount( window.splide.Extensions );
 
  
+
+ document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '.ecosystem .splide' );
+    splide.mount();
+  } );
+
+
   });
 
