@@ -91,15 +91,25 @@ section,footer{
     justify-content: center;
     width: 100%;
 }
+
+@media(max-width:1024px){
+    section>div:not(.nav-container),footer>div{
+        width: 1200px;
+    }
+}
 section>div:not(.nav-container),footer>div{
-    width: 1200px;
     padding: 100px 20px;
 }
 
 @media(max-width:480px){
+/* footer>div{
+   
+} */
 footer>div{
+    width: calc(100%)!important;
     padding: 100px 0px;
 }
+
 }
 /* Nav */
 #about .nav{  
@@ -981,6 +991,13 @@ font-weight: 300;
 }
 
 @media(max-width:480px){
+.footer-container .newsletter .newsletter-container .head-news-text{
+padding: 10px;
+}
+
+.footer-container .newsletter .newsletter-container .n-form {
+    padding: 10px;
+}
     .footer-container .newsletter {
         scale: 0.9;
     }
