@@ -36,14 +36,14 @@
 // // Splide
 window.addEventListener("load", (event) => {
 
-// const splide = new Splide( '.hero .splide', {
-//     heightRatio: 0.5625,
-//     cover      : true,
-//     video      : {
-//       loop: true,
-//     },
-//   } );
-//  new Splide( '.hero .splide' ).mount( window.splide.Extensions );
+const splide = new Splide( '.hero .splide', {
+    heightRatio: 0.5625,
+    cover      : true,
+    video      : {
+      loop: true,
+    },
+  } );
+ new Splide( '.hero .splide' ).mount( window.splide.Extensions );
 
  
  
