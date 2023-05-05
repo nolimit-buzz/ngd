@@ -215,6 +215,14 @@ footer>div{
     padding-inline-start: 0px!important;
 }
 
+ul.submenu::before {
+    content: "";
+    height: 117%;
+    width: 105%;
+    background: #fff;
+    position: absolute;
+    left: 0%;
+}
 
 @media(max-width:768px){
 
