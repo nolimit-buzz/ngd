@@ -24,6 +24,10 @@
             })
         })
 
+
+     
+          
+          
         
 
 
@@ -33,7 +37,7 @@
 
 
 
-// // Splide
+// HERO Splide
 window.addEventListener("load", (event) => {
 
 const splide = new Splide( '.hero .splide', {
@@ -47,7 +51,7 @@ const splide = new Splide( '.hero .splide', {
 
  
  
-
+// Ecosystem
   new Splide('.ecosystem .splide', {
     type       : 'loop',
     height     : '9rem',
@@ -64,6 +68,12 @@ const splide = new Splide( '.hero .splide', {
 
  new Splide( '.ecosystem .splide' ).mount( window.splide.Extensions );
 
+    // Hero slider pagination images : auto jquery
+    $("img.preview").each(function(a,i){
+        var src =  $(this).attr("src");
+          console.log("SRC",src);
+              $("button.splide__pagination__page").eq(a).attr("style",`background:url(${src})`)
+      })
 
   });
 

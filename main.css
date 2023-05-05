@@ -100,9 +100,11 @@ section,footer{
     }
 
 @media(max-width:480px){
-/* footer>div{
-   
-} */
+
+section>div{
+    width: calc(100% - 20px) !important;
+
+}
 footer>div{
     width: calc(100%)!important;
     padding: 100px 0px;
@@ -322,7 +324,20 @@ margin-bottom: 14px;
     left: 80%!important; 
     top: 8%!important;
 }
+/* 
+.splide__video {
+    width: 90%!important;
+}
+.splide__video__wrapper{position: relative;}
+.splide__video__wrapper video::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 10%;
+    right: 0;
+    background-color: #fff;
 
+} */
 
 @media(min-width:1025px){
 
@@ -398,8 +413,30 @@ margin-bottom: 14px;
 
 /*@Splide Orride  */
 .hero-container .splide__list {
-    height: 500px!important;
+    height: 600px!important;
 }
+
+button.splide__pagination__page {
+    /* background: url( http://127.0.0.1:5501/Online%20Classes/ngd/img/preview01.png)!important; */
+    background-position: center;
+    background-size: contain!important;
+    border-radius: 0;
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+    margin: 6px;
+}
+
+
+@media(max-width:480px){
+    button.splide__pagination__page {
+        height: 25px;
+        width: 25px;
+        background-repeat: no-repeat;
+        margin: 3px;
+    }
+}
+
 .hero-container .splide__slide img {
     object-fit: cover;
     width: 90%;
@@ -445,7 +482,13 @@ color: #46B175;
 }
 
 .hero-container  .splide__pagination {
-justify-content: flex-start!important;
+    justify-content: flex-start!important;
+    list-style-type: disc;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
 }
 
 .hero-container .splide__arrow--next {
@@ -464,6 +507,9 @@ justify-content: flex-start!important;
     left: -26px;
     top: -40px;
 }
+
+
+
 .hero-container  .splide::after {
     background: url(./img/splide-after.png);
     position: absolute;
@@ -474,6 +520,7 @@ justify-content: flex-start!important;
     /* z-index: 999; */
     left: -73px;
     top: 0;
+    z-index: -1;
 }
 
 
