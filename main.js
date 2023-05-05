@@ -53,6 +53,7 @@ const splide = new Splide( '.hero .splide', {
     height     : '9rem',
     perPage    : 2,
     autoWidth: true,
+    pagination: false,
     breakpoints: {
         768: {
            perPage: 1,

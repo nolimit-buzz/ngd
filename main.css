@@ -183,7 +183,7 @@ footer>div{
     align-items: center;
     gap:20px;
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
 
 }
 #about .nav .nav-container .nav-button .nav ul.main li{
@@ -204,8 +204,8 @@ footer>div{
 #about .nav .nav-container .nav-button .nav ul.submenu{
     position: absolute;
     /* left: -40px; */
-    top: 40px;
-    min-width: 100px;
+    top: 23px;
+    min-width: 110px;
     display: none;
     list-style-type: disc;
     margin-block-start: 1em;
@@ -214,11 +214,36 @@ footer>div{
     margin-inline-end: 0px;
     padding-inline-start: 0px!important;
 }
+
+
+@media(max-width:768px){
+
+    #about .nav .nav-container .nav-button .nav ul.submenu{
+        background-color: #fff;
+    }
+    #about .nav .nav-container .nav-button .nav ul.submenu li {
+        padding: 15px;
+        margin-bottom:0!important;
+    }
+    #about .nav .nav-container .nav-button .nav ul.submenu  {
+        min-width: 155px!important;
+        z-index: 99;
+        left: -40px;
+        text-align: center;
+        top: 17px;
+    }
+    #about .nav .nav-container .nav-button .nav ul.submenu li a {
+        font-size: 15px!important;
+    }
+    
+
+}
+
 #about .nav .nav-container .nav-button .nav ul.submenu.active{
     display: block;
 }
 #about .nav .nav-container .nav-button .nav ul.submenu li{
-margin-bottom: 10px;
+margin-bottom: 14px;
 }
 
 #about .mobile-nav{
@@ -277,6 +302,20 @@ margin-bottom: 10px;
 }
 
 /* Hero */
+
+.splide__video__play:after {
+    border-color: transparent transparent transparent #fff!important;
+}
+.splide__video__play {
+    /* align-items: center;/ */
+    background: #23454F!important;
+}
+.splide__video__play {
+    left: 80%!important; 
+    top: 8%!important;
+}
+
+
 @media(min-width:1025px){
 
 #about .hero-container{
@@ -610,6 +649,12 @@ section.ecosystem {
     right: 0;
 }
 
+@media (max-width:480px){
+    .community{
+        background-color: #ffffff;
+        color: #23454F;
+    }
+}
 
 .ecosystem-container .ecos .bg{
     height: 450px;
@@ -618,12 +663,16 @@ section.ecosystem {
     margin-left: -115px;
     z-index: 9;
     margin-top: 55px;
+    background-size: cover!important;
 }
 
 
 /* @override */
 div#splide02-track{
     /* display: none; */
+}
+.ecosystem-container .splide__pagination{
+    display: none;
 }
 .ecosystem-container .splide__arrow{
     position: relative!important;
@@ -837,9 +886,9 @@ flex-direction: column;
 
 .blog-container .body .b-card .fimg{
     height: 200px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center !important;
+    background-size: cover!important;
+    background-repeat: no-repeat !important;
 } 
 .blog-container .body .b-card .b-content p{
     color: #707070;
