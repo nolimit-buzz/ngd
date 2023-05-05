@@ -36,21 +36,32 @@
 // // Splide
 window.addEventListener("load", (event) => {
 
-const splide = new Splide( '.hero .splide', {
-    heightRatio: 0.5625,
-    cover      : true,
-    video      : {
-      loop: true,
-    },
-  } );
- new Splide( '.hero .splide' ).mount( window.splide.Extensions );
+// const splide = new Splide( '.hero .splide', {
+//     heightRatio: 0.5625,
+//     cover      : true,
+//     video      : {
+//       loop: true,
+//     },
+//   } );
+//  new Splide( '.hero .splide' ).mount( window.splide.Extensions );
 
  
+ 
 
- document.addEventListener( 'DOMContentLoaded', function() {
-    var splide = new Splide( '.ecosystem .splide' );
-    splide.mount();
+  new Splide('.ecosystem .splide', {
+    type       : 'loop',
+    height     : '9rem',
+    perPage    : 2,
+    autoWidth: true,
+    breakpoints: {
+        768: {
+           perPage: 1,
+           snap: true
+        }
+     }
   } );
+
+ new Splide( '.ecosystem .splide' ).mount( window.splide.Extensions );
 
 
   });
