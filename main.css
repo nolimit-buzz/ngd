@@ -633,26 +633,45 @@ div#splide02-track{
     display: flex;
     gap: 26px;
     position: absolute;
-    top: 27px;
+    
    
 }
 
 @media(min-width:768px){
     .ecosystem-container .splide__arrows.splide__arrows--ltr {
         left: 29%;
+        top: 27px;
     }
-
+    .ecosystem-container .splide__arrow{
+        width: 4em!important;
+    }
 }
 
 @media(max-width:768px){
     .ecosystem-container .splide__arrows.splide__arrows--ltr {
         left: 68%!important;
+        top: 27px;
     }
     .ecosystem-container .splide__arrow{
-    
-        width: 3em!important;
+        width: 4em!important;
     }
 }
+
+@media(max-width:480px){
+    .ecosystem-container .splide__arrows.splide__arrows--ltr {
+        left: 0%!important;
+        top: 92%!important;
+        left: -4%!important;
+
+    }
+
+    .ecosystem-container .splide__arrow{
+        width: 4em!important;
+    }
+}
+
+
+
 .ecosystem-container .splide__arrow {
  
     background: #ccc;
@@ -665,7 +684,7 @@ div#splide02-track{
     position: absolute;
     top: 5.5%!important;
     transform: translateY(-50%);
-    width: 4em!important;
+    /* width: 4em!important; */
  
 }
 @media(min-width:481px){
