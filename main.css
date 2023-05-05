@@ -408,6 +408,17 @@ margin-bottom: 14px;
     position: absolute;
     left: 0;
 }
+ 
+
+@media(max-width:480px){
+    .hero-container .splide__slide img {
+        width: 100%;
+    }
+    .hero-container .splide__slide .content {
+        left: 24%!important;
+    }
+}
+
 .hero-container .splide__slide .content{
     position: absolute;
     content: "";
