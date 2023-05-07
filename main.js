@@ -33,13 +33,21 @@
 
 
     })
-})
+})//jQuery ends
 
 
 
-// HERO Splide
+
+//window loads start
 window.addEventListener("load", (event) => {
 
+// AOS Animation
+AOS.init({
+    duration: 650,
+    // once: true
+  }); 
+
+// HERO Splide
 const splide = new Splide( '.hero .splide', {
     heightRatio: 0.5625,
     cover      : true,
@@ -51,7 +59,7 @@ const splide = new Splide( '.hero .splide', {
 
  
  
-// Ecosystem
+// Ecosystem splide
   new Splide('.ecosystem .splide', {
     type       : 'loop',
     height     : '9rem',
@@ -68,12 +76,44 @@ const splide = new Splide( '.hero .splide', {
 
  new Splide( '.ecosystem .splide' ).mount( window.splide.Extensions );
 
-    // Hero slider pagination images : auto jquery
-    $("img.preview").each(function(a,i){
-        var src =  $(this).attr("src");
-          console.log("SRC",src);
-              $("button.splide__pagination__page").eq(a).attr("style",`background:url(${src})`)
-      })
+// Hero slider pagination images : auto jquery
+$("img.preview").each(function(a,i){
+    var src =  $(this).attr("src");
+            $("button.splide__pagination__page").eq(a).attr("style",`background:url(${src})`)
+})
 
-  });
+
+
+// Counter
+const counterUp = window.counterUp.default
+
+const callback = entries => {
+	entries.forEach( entry => {
+		const el = entry.target
+		if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
+                    for(const counter of counters) {
+      	              counterUp( counter, {
+      		              duration: 1000,
+      		              delay: 16,
+      	              })
+                    // el.classList.add( 'is-visible' )
+                  }
+	    }
+	} )
+}
+
+// observer
+const IO = new IntersectionObserver( callback, { threshold: 1 } )
+
+// First element to target
+const el = document.querySelector( '.figur' )
+
+// all numbers
+const counters = document.querySelectorAll( '.figur' )
+
+IO.observe( el )
+
+
+
+  });//wndoew load ends
 
